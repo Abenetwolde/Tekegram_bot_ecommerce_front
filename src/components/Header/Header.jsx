@@ -11,7 +11,7 @@ console.log(user)
             <Button onClick={onClose}>Закрыть</Button>
             <span className={'username'}>
                 {user?.username} data
-                {user?.userpic}
+                {user?.photo_url}
             </span>
         </div>
     );
