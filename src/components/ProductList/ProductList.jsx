@@ -7,11 +7,11 @@ import {useCallback, useEffect} from "react";
 
 const products = [
 
-    {id: '1', /* img:"https://api.ashewa.com/media/products-thumbnails/1664127713.webp", */title: 'product1', price: 12000, description: 'discription of a product1'},
-    {id: '2', /* img:"https://api.ashewa.com/media/products-thumbnails/1672655372_mRgSFR5.webp", */title: 'product2', price: 13400, description: 'discription of a product2'},
-    {id: '3', /* img:"https://api.ashewa.com/media/products-thumbnails/1658335920.jpg", */title: 'product3', price: 1600, description: 'discription of a product3'},
-    {id: '4', /* img:"https://api.ashewa.com/media/products-thumbnails/1680164708_KQhfMUU.webp", */title: 'product4', price: 5986, description: 'discription of a product4'},
-    {id: '5',/*  img:"https://api.ashewa.com/media/products-thumbnails/1680178332_Ej3hxX8.webp", */title: 'product5', price: 7456, description: 'discription of a product5'},
+    {id: '1', img:"https://api.ashewa.com/media/products-thumbnails/1664127713.webp",title: 'product1', price: 12000, description: 'discription of a product1'},
+    {id: '2', img:"https://api.ashewa.com/media/products-thumbnails/1672655372_mRgSFR5.webp",title: 'product2', price: 13400, description: 'discription of a product2'},
+    {id: '3', img:"https://api.ashewa.com/media/products-thumbnails/1658335920.jpg",title: 'product3', price: 1600, description: 'discription of a product3'},
+    {id: '4', img:"https://api.ashewa.com/media/products-thumbnails/1680164708_KQhfMUU.webp",title: 'product4', price: 5986, description: 'discription of a product4'},
+    {id: '5', img:"https://api.ashewa.com/media/products-thumbnails/1680178332_Ej3hxX8.webp",title: 'product5', price: 7456, description: 'discription of a product5'},
 
 
 
@@ -34,7 +34,7 @@ const ProductList = () => {
             queryId,
 
         }
-        fetch('http://localhost:8000/web-data', {
+        fetch('http://192.168.1.100:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
