@@ -5,14 +5,15 @@ import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 
 const products = [
-    {id: '1', title: '', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая'},
-    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая'},
-    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая'},
-    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые'},
-    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая'},
+
+    {id: '1', img:"https://api.ashewa.com/media/products-thumbnails/1664127713.webp",title: 'product1', price: 12000, description: 'discription of a product1'},
+    {id: '2', img:"https://api.ashewa.com/media/products-thumbnails/1672655372_mRgSFR5.webp",title: 'product2', price: 13400, description: 'discription of a product2'},
+    {id: '3', img:"https://api.ashewa.com/media/products-thumbnails/1658335920.jpg",title: 'product3', price: 1600, description: 'discription of a product3'},
+    {id: '4', img:"https://api.ashewa.com/media/products-thumbnails/1680164708_KQhfMUU.webp",title: 'product4', price: 5986, description: 'discription of a product4'},
+    {id: '5', img:"https://api.ashewa.com/media/products-thumbnails/1680178332_Ej3hxX8.webp",title: 'product5', price: 7456, description: 'discription of a product5'},
+
+
+
 ]
 
 const getTotalPrice = (items = []) => {
@@ -47,6 +48,15 @@ const ProductList = () => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
     }, [onSendData])
+    useEffect(() => {
+        fetch('http://localhost:8000/getphoto', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+
+        })
+    }, [onSendData])
 
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
@@ -65,7 +75,7 @@ const ProductList = () => {
         } else {
             tg.MainButton.show();
             tg.MainButton.setParams({
-                text: `Купить ${getTotalPrice(newItems)}`
+                text: `Buy ${getTotalPrice(newItems)}`
             })
         }
     }
