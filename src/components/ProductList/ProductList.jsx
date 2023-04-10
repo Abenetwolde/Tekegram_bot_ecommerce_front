@@ -29,7 +29,7 @@ const ProductList = () => {
 
     const onSendData = useCallback(() => {
         const data = {
-            // products: addedItems,
+            products: addedItems,
             totalPrice: getTotalPrice(addedItems),
             queryId,
 
