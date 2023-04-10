@@ -6,6 +6,7 @@ const ProductItem = ({product, className, onAdd}) => {
 
     const onAddHandler = () => {
         onAdd(product);
+        console.log(product)
     }
 
     return (

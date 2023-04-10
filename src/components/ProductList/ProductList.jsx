@@ -32,7 +32,7 @@ const ProductList = () => {
             products: addedItems,
             totalPrice: getTotalPrice(addedItems),
             queryId,
-            // user
+          
         }
         fetch('http://localhost:8000/web-data', {
             method: 'POST',
