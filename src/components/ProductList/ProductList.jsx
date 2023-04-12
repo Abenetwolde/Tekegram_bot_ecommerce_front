@@ -27,10 +27,10 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const {tg, queryId} = useTelegram();
 console.log(tg )
-console.log("query"+queryId )
+console.log(queryId )
     const onSendData = useCallback(() => {
         const data = {
-            // products: addedItems,
+             products: addedItems,
             totalPrice: getTotalPrice(addedItems),
             queryId,
 
