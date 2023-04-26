@@ -26,25 +26,25 @@ const ScrollButtonMenu = () => {
 
   return (
     <div className="scroll-button-menu-container">
-      <button
+      {/* <button
         className="scroll-button"
         disabled={scrollLeft === 0}
         onClick={scrollLeftHandler}
       >
         &lt;
-      </button>
+      </button> */}
       <div className="scroll-button-menu" onScroll={handleScroll} ref={containerRef}>
         {button.map((button, index) => (
           <button key={index} className="button">{button.name}</button>
         ))}
       </div>
-      <button
+      {/* <button
         className="scroll-button"
         // disabled={scrollLeft === containerRef.current.scrollWidth - containerRef.current.clientWidth}
         onClick={scrollRightHandler}
       >
         &gt;
-      </button>
+      </button> */}
     </div>
   );
 };
