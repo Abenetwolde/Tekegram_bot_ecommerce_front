@@ -5,6 +5,8 @@ import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 // import logo1 from "./img"
 
+import { Tabs, Tab } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 const products = [
 
     {id: '1', img:"https://api.ashewa.com/media/products-thumbnails/1664127713.webp",title: 'product1', price: 12000, description: 'discription of a product1'},
@@ -16,7 +18,36 @@ const products = [
 
 
 ]
+const tabs = [
 
+    {id: '1', label:"tab1"},
+    {id: '2',label:"tab1"},
+    {id: '1', label:"tab3"},
+    {id: '2',label:"tab4"},
+
+
+]
+const useStyles = makeStyles(() => ({
+    root: {
+      width: '100%',
+      overflowX: 'auto',
+    },
+    tabs: {
+      display: 'flex',
+    },
+    tab: {
+      backgroundColor: '#eee',
+      color: '#333',
+      border: 'none',
+      padding: '10px',
+      marginRight: '10px',
+      cursor: 'pointer',
+    },
+    activeTab: {
+        backgroundColor: '#333',
+        color: '#fff',
+      },
+    }));
 const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
         return acc += item.price
@@ -24,6 +55,12 @@ const getTotalPrice = (items = []) => {
 }
 
 const ProductList = () => {
+    const classes = useStyles();
+    const [activeTab, setActiveTab] = useState(0);
+
+    const handleTabChange = (event, newValue) => {
+      setActiveTab(newValue);
+    };
     const [addedItems, setAddedItems] = useState([]);
     const {tg, queryId} = useTelegram();
 console.log(tg )
@@ -49,7 +86,7 @@ console.log(queryId )
         return () => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
-    }, [onSendData])
+    }, [onSendData,activeTab])
 
 
     const onAdd = (product) => {
@@ -74,7 +111,26 @@ console.log(queryId )
         }
     }
 
-    return (
+    return (<div>
+ <div className={classes.root}>
+      <Tabs
+        value={activeTab}
+        onChange={handleTabChange}
+        className={classes.tabs}
+        variant="scrollable"
+        scrollButtons="auto"
+      >
+        {tabs.map((tab, index) => (
+          <Tab
+            key={index}
+            label={tab.label}
+            className={`${classes.tab} ${
+              activeTab === index ? classes.activeTab : ''
+            }`}
+          />
+        ))}
+      </Tabs>
+    </div>
         <div className={'list'}>
             {products.map(item => (
                 <ProductItem
@@ -83,6 +139,7 @@ console.log(queryId )
                     className={'item'}
                 />
             ))}
+        </div>
         </div>
     );
 };
