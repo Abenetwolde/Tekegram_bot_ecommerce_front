@@ -1,0 +1,43 @@
+
+.scroll-button-menu-container {
+    display: flex;
+  }
+
+  .scroll-button {
+    border: none;
+    background-color: #fff;
+    color: #333;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .scroll-button:hover {
+    background-color: #eee;
+  }
+
+  .scroll-button[disabled] {
+    cursor: default;
+    opacity: 0.3;
+  }
+
+  .scroll-button-menu {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+
+  .button {
+    border: none;
+    background-color: #eee;
+    color: #333;
+    font-size: 18px;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #ddd;
+  }
+ 
