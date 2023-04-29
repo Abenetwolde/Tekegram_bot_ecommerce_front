@@ -23,17 +23,68 @@
   .glass:hover {
     cursor: pointer;
   }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    * {
+  @media screen and (max-device-width: 480px){
+    /* * {
       max-width: 100%;
-    }
-  
+    } */
+    searchContainer {
+        width: 100vw;
+        margin-left: 2vh;
+        margin-right: 2vh;
+        margin-top: 2vh;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
     input {
-      width: 61vw;
-      margin-top: 2vh;
+      width: 100%;
+   
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
     }
   }
+  @media screen and (max-device-width: 480px){
+    /* * {
+      max-width: 100%;
+    } */
+    .searchContainer {
+        width: 100vw;
+        margin-left: 4vh;
+        margin-right: 4vh;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    input {
+      width: 100%;
+   
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
+  @media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+    .searchContainer {
+        width: 100vw;
+        margin-left: 2vh;
+        margin-right: 2vh;
+        margin-top: 2vh;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    input {
+        width: 100%;
+     
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    }
+
+ 
   

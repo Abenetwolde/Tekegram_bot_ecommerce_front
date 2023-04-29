@@ -7,7 +7,7 @@ import './Search.css';
 const Search = () => {
 
     return (
-        <div>
+        <div className='searchContainer'>
         
         <input placeholder='Search' autoFocus={true} />
         {/* <input onChange={e => setQuery(e)} onKeyPress={e => handleKey(e)} autoFocus={true} /> */}
