@@ -23,37 +23,20 @@
   .glass:hover {
     cursor: pointer;
   }
-  @media screen and (max-device-width: 480px){
-    /* * {
-      max-width: 100%;
-    } */
-    searchContainer {
-        width: 100vw;
-        margin-left: 2vh;
-        margin-right: 2vh;
-        margin-top: 2vh;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-      }
-    input {
-      width: 100%;
-   
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-  }
+
   @media screen and (max-device-width: 480px){
     /* * {
       max-width: 100%;
     } */
     .searchContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: red; */
+        padding: 10px;
         width: 100vw;
-        margin-left: 4vh;
-        margin-right: 4vh;
-        margin-top: 2vh;
-        margin-bottom: 2vh;
+
+
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
