@@ -4,6 +4,7 @@ import ProductItem from "../ProductItem/ProductItem";
 import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 import ScrollButtonMenu from '../Scroll/scrollmenu';
+import Search from '../Search/Search';
 // import logo1 from "./img"
 
 const products = [
@@ -77,6 +78,7 @@ console.log(queryId )
 
     return (
         <div>
+            <Search/>
             <ScrollButtonMenu/>
         <div className={'list'}>
             {products.map(item => (
