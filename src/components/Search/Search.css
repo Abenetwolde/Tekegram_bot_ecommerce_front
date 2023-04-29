@@ -23,7 +23,10 @@
   .glass:hover {
     cursor: pointer;
   }
+  @media screen and (min-device-width: 100px)
+and (max-device-width: 479px){
 
+}
   @media screen and (max-device-width: 480px){
     /* * {
       max-width: 100%;
