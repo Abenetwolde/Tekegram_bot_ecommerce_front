@@ -7,9 +7,10 @@ import './Search.css';
 const Search = () => {
 
     return (
-        <div className="home">
-        <h1 className="home-logo">Spresso</h1> <h1 className="home-logo-2">Search</h1>
-        <input onChange={e => setQuery(e)} onKeyPress={e => handleKey(e)} autoFocus={true} />
+        <div>
+        
+        <input placeholder='Search' autoFocus={true} />
+        {/* <input onChange={e => setQuery(e)} onKeyPress={e => handleKey(e)} autoFocus={true} /> */}
         {/* <img onClick={search} className="glass" alt="magnifying glass" src={glass} /> */}
       </div>
     );

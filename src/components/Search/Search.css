@@ -1,26 +1,4 @@
-.home {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    line-height: normal;
-  }
-  .home-logo {
-    font-weight: 1000;
-    display: inline;
-    text-align: center;
-    background-image: linear-gradient(to right, #ff5c1c 0%, #ffc04b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .home-logo-2 {
-    display: inline;
-    padding-left: 5.5px;
-    text-align: center;
-    color: #545454;
-    margin-right: 50px;
-  }
+
   input {
     width: 522px;
     height: 48px;
@@ -49,9 +27,7 @@
     * {
       max-width: 100%;
     }
-    .home {
-      text-align: center;
-    }
+  
     input {
       width: 61vw;
       margin-top: 2vh;
