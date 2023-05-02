@@ -6,6 +6,8 @@ import {useCallback, useEffect} from "react";
 import ScrollButtonMenu from '../Scroll/scrollmenu';
 import Search from '../Search/Search';
 import Searchbar from '../Search/Search';
+import Categories from '../Categories/Categories';
+import DealSlider from '../DealSlider/DealSlider';
 // import logo1 from "./img"
 
 const products = [
@@ -25,7 +27,7 @@ const getTotalPrice = (items = []) => {
         return acc += item.price
     }, 0)
 }
-
+const loading =false
 const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const {tg, queryId} = useTelegram();
@@ -80,7 +82,11 @@ console.log(queryId )
     return (
         <div>
             <Searchbar/>
-            <ScrollButtonMenu/>
+            {/* <Categories/> */}
+            <DealSlider title={"Discounts for You"}/>
+            
+            {/* {!loading && <ProductSlider title={"Suggested for You"} tagline={"Based on Your Activity"} />} */}
+
         <div className={'list'}>
             {products.map(item => (
                 <ProductItem
