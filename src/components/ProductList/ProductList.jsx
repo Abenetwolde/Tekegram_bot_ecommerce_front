@@ -5,6 +5,7 @@ import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 import ScrollButtonMenu from '../Scroll/scrollmenu';
 import Search from '../Search/Search';
+import Searchbar from '../Search/Search';
 // import logo1 from "./img"
 
 const products = [
@@ -78,7 +79,7 @@ console.log(queryId )
 
     return (
         <div>
-            <Search/>
+            <Searchbar/>
             <ScrollButtonMenu/>
         <div className={'list'}>
             {products.map(item => (
