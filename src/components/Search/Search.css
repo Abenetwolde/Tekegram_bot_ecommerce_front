@@ -1,5 +1,8 @@
 form {
-  background: var(--tg-theme-button-color);
-  color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-text-color);
+  color: var(--tg-theme-button-color);
 
+}
+input{
+  background: var(--tg-theme-button-text-color);
 }
